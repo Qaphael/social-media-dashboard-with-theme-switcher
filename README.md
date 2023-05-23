@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Qaphael/social-media-dashboard-with-theme-switcher](https://github.com/Qaphael/social-media-dashboard-with-theme-switcher)
+- Live Site URL: [https://qaphael.github.io/social-media-dashboard-with-theme-switcher/](https://qaphael.github.io/social-media-dashboard-with-theme-switcher/)
 
 ## My process
 
