@@ -1,0 +1,396 @@
+:root {
+  /* ### Primary */
+
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+
+  /* #### Dark Theme */
+
+  --Toggle-dark: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+  /* #### Light Theme */
+
+  --Toggle-light: hsl(230, 22%, 74%);
+
+  /* ### Neutral */
+
+  /* #### Dark Theme */
+  --Very-Dark-Blue-bg: hsl(230, 17%, 14%);
+  --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+  --Dark-Desaturated-Blue-Card-bg: hsl(228, 28%, 20%);
+  --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+  --White-Text: hsl(0, 0%, 100%);
+  --hover: hsl(229, 27%, 28%);
+
+  /* #### Light Theme */
+
+  --Very-Dark-Blue-bg: hsl(0, 0%, 100%);
+  --Very-Dark-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+  --Dark-Desaturated-Blue-Card-bg: hsl(228, 100%, 96%);
+  --Desaturated-Blue-Text: hsl(228, 12%, 44%);
+  --Desaturated-Blue-Text-overview: hsl(228, 12%, 44%);
+  --White-Text: hsl(230, 17%, 14%);
+  --hover: hsl(230, 100%, 92%);
+  --border: 1px solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  --light-bg: hsl(228, 100%, 96%);
+  --light-color: hsl(228, 12%, 44%);
+
+  /* ### Body Copy */
+
+  --Font-size-Overview-Card-Headings: 14px;
+
+  /* ### Font */
+
+  --Family: "Inter", sans-serif;
+  --Weights-1: 400;
+  --Weights-2: 700;
+}
+
+body.active {
+  --Very-Dark-Blue-bg: hsl(230, 17%, 14%);
+  --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+  --Dark-Desaturated-Blue-Card-bg: hsl(228, 28%, 20%);
+  --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+  --White-Text: hsl(0, 0%, 100%);
+  --hover: hsl(229, 27%, 28%);
+  --light-bg: hsl(230, 17%, 14%);
+  --light-color: var(--Toggle-dark);
+  --Desaturated-Blue-Text-overview: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Very-Dark-Blue-Top-BG-Pattern);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  transition: all 0.3s ease;
+  font-family: var(--Family);
+}
+
+p {
+  margin-bottom: 0;
+  font-size: var(--Font-size-Overview-Card-Headings);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-weight: var(--Weights-2);
+}
+
+/* ############### GRID NAV ############### */
+.grid--nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+.theme-toggle--container {
+  margin-left: auto;
+}
+
+/* ############### GRID ############### */
+
+.container-fluid {
+  max-width: 1440px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-bottom: 2rem;
+}
+
+.grid-item {
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 10px 20px;
+  background-color: var(--Dark-Desaturated-Blue-Card-bg);
+  cursor: pointer;
+}
+
+.grid-item:hover {
+  background-color: var(--hover);
+}
+
+@media (max-width: 991px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .grid--nav {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: left;
+  }
+
+  .subtitle {
+    border-bottom: 2px solid var(--Desaturated-Blue-Text);
+    padding-bottom: 20px;
+  }
+
+  .heading--container {
+    padding: 40px 20px 10px 20px;
+  }
+
+  .theme--text {
+    position: absolute;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .grid--nav {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: left;
+  }
+
+  .subtitle {
+    border-bottom: 2px solid var(--Desaturated-Blue-Text);
+    padding-bottom: 20px;
+  }
+
+  .heading--container {
+    padding: 40px 20px 10px 20px;
+    margin-right: 20px;
+  }
+
+  .theme-toggler {
+    margin-right: 10px;
+  }
+
+  .theme--text {
+    position: absolute;
+    left: 1rem;
+  }
+}
+
+/* ############### TITLE ############### */
+.theme-toggle--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.heading--2--box {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.hading--2 {
+  font-size: 1.8rem;
+  font-weight: var(--Weights-2);
+  color: var(--Desaturated-Blue-Text-overview);
+}
+
+.navbar {
+  display: flex;
+}
+
+.title,
+.heading--2--box {
+  color: var(--White-Text);
+  font-size: 2.1rem;
+}
+
+.theme--text {
+  color: var(--Desaturated-Blue-Text);
+  font-weight: var(--Weights-2);
+  padding-right: 10px;
+  font-size: 1rem;
+}
+
+.subtitle {
+  color: var(--Desaturated-Blue-Text);
+}
+
+.heading--container {
+  padding: 40px 20px 25px 20px;
+}
+
+/* ############### THEME CHANGER ############### */
+
+.theme-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggler .toggler {
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  background: var(--light-color);
+  position: relative;
+  cursor: pointer;
+  border: var(--border);
+  margin: 0 10px;
+}
+
+.theme-toggler .toggler::before {
+  content: "";
+  position: absolute;
+  background: var(--light-bg);
+  top: 2.3px;
+  left: 2px;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+.theme-toggler.active .toggler::before {
+  left: 32px;
+}
+
+/* ############### GRID 1 ############### */
+.grid--item--1 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.facebook--logo--box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.fb--page--name {
+  color: var(--Desaturated-Blue-Text);
+  font-size: var(--Font-size-Overview-Card-Headings);
+  margin-bottom: 0;
+  padding-left: 0.5rem;
+}
+
+.no--of--followers {
+  color: var(--White-Text);
+  font-size: 4rem;
+  font-weight: var(--Weights-2);
+  margin-bottom: 0;
+}
+
+.follower--text {
+  color: var(--Desaturated-Blue-Text);
+  margin-bottom: 1.5rem;
+  font-size: var(--Font-size-Overview-Card-Headings);
+  text-transform: uppercase;
+  letter-spacing: 0.43rem;
+}
+
+.per--day--box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Lime-Green);
+  padding-bottom: 1.6rem;
+}
+
+.per--day--no {
+  padding-left: 0.5rem;
+  font-weight: var(--Weights-2);
+}
+
+.color--lining--fb,
+.color--lining--tt,
+.color--lining--i,
+.color--lining--y {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px 10px 0 0;
+}
+
+.color--lining--fb {
+  background-color: var(--Facebook);
+}
+
+.color--lining--tt {
+  background-color: var(--Twitter);
+}
+
+.color--lining--i {
+  background-image: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+}
+
+.color--lining--y {
+  background-color: var(--YouTube);
+}
+
+/* ############### GRID 2 ############### */
+.grid--item--2 {
+  padding: 25px;
+}
+
+.overview--box {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.overview--text {
+  color: var(--Desaturated-Blue-Text);
+  font-weight: var(--Weights-2);
+}
+
+.fb--logo {
+  margin-left: auto;
+}
+
+.overview--no--box {
+  display: flex;
+}
+
+.percent--box {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: var(--Lime-Green);
+}
+
+.overview--no {
+  color: var(--White-Text);
+  font-weight: var(--Weights-2);
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.percent {
+  font-weight: var(--Weights-2);
+  padding-left: 10px;
+}
+
+.red {
+  color: var(--Bright-Red);
+}
